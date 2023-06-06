@@ -1,10 +1,7 @@
 version: '3'
 services:
     nginx:
-      args:
-        - http_proxy
-        - https_proxy
-        - no_proxy
+      context: .
       volumes:
         - ./nginx/logs:/var/log/nginx
         - ./nginx/sites-available:/etc/nginx/sites-available
